@@ -1,17 +1,15 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/planet-clock-element.js",
-  "fragments": [
-    "src/lazy-element.js"
-  ],
+  "shell": "src/planetClockElement.js",
+  "fragments": [],
   "sources": [
-    "src/planet-clock-element.js",
+    "src/planetClockElement.js",
+    "src/style.css",
     "manifest/**",
     "manifest.json",
     "package.json",
     "index.html",
-    "src/planet-clock-element.js",
-    "src/lazy-element.js"
+    "src/planetClockElement.js"
   ],
   "extraDependencies": [
     "bower_components/webcomponentsjs/*.js",
@@ -20,9 +18,21 @@
   ],
   "builds": [
     {
-      "bundle": true,
+      "bundle": {
+        "inlineCss": true,
+        "inlineScripts": true,
+        "rewriteUrlsInTemplates": true,
+        "sourcemaps": true,
+        "stripComments": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
       "js": {
-        "minify": false,
+        "minify": true,
         "compile": "es5",
         "transformModulesToAmd": true
       },

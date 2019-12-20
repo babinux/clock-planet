@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Description planet-clock-element",
   "repository": "XXXXX",
-  "main": "planet-clock-element.js",
-  "module": "planet-clock-element.js",
+  "main": "planetClockElement.js",
+  "module": "planetClockElement.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext js,html"

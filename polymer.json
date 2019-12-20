@@ -1,18 +1,29 @@
 {
-  "shell": "src/planet-clock-element.js",
+  "shell": "src/planetClockElement.js",
   "entrypoint": "index.html",
-  "fragments": ["src/lazy-element.js"],
   "npm": true,
   "moduleResolution": "node",
-  "sources": ["src/planet-clock-element.js", "manifest/**", "manifest.json", "package.json"],
+  "sources": ["src/planetClockElement.js", "src/style.css", "manifest/**", "manifest.json", "package.json"],
   "extraDependencies": [
     "robots.txt",
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [{
-    "bundle": true,
-    "js": { 
-      "minify": false,
+    "bundle": {
+      "inlineCss": true,
+      "inlineScripts": true,
+      "rewriteUrlsInTemplates": true,
+      "sourcemaps": true,
+      "stripComments": true
+    },
+     "css": {
+       "minify": true
+     },
+     "html": {
+       "minify": true
+     },
+    "js": {
+      "minify": true,
       "compile": "es5",
       "transformModulesToAmd": true
     },

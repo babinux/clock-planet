@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["index.html","f0562a3ef925ad4098b4b2d7d56429d3"],["src/lazy-element.js","13371cb1465ce7b3a6b3b2decac4fa4a"],["src/planet-clock-element.js","3ff4e7a6ad84c7616d0f830228e8a1ec"]];
+var precacheConfig = [["index.html","c5c519d7bb22592ca2eb367aaadeabae"],["src/planetClockElement.js","33314668336593f92c9b06c2e7a27bf1"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 

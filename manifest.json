@@ -2,7 +2,6 @@
   "display": "fullscreen",
   "version": "1.0",
   "manifest_version": 1,
-
   "description": "description planet-clock-element",
   "start_url": "index.html",
   "name": "planet-clock-element",

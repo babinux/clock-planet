@@ -7,7 +7,7 @@ import {
 } from 'lit-element';
 
 
-export class PlanetClock extends LitElement {
+export class planetClockElement extends LitElement {
   /**
    * Define properties. Properties defined here will be automatically 
    * observed.
@@ -57,7 +57,7 @@ export class PlanetClock extends LitElement {
 
   static get styles() {
     var request = new XMLHttpRequest();
-    request.open('GET', '/src/style.css', false);
+    request.open('GET', './src/style.css', false);
     request.send();
 
     return [
@@ -467,4 +467,4 @@ export class PlanetClock extends LitElement {
 }
 
 // Register the element with the browser
-customElements.define('planet-clock-element', PlanetClock);
+customElements.define('planet-clock-element', planetClockElement);
