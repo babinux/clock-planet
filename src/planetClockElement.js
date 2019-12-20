@@ -6,6 +6,23 @@ import {
   unsafeCSS
 } from 'lit-element';
 
+// import styles from "./style.css";
+
+// console.log(styles);
+
+const sheet = new CSSStyleSheet();
+// set its contents by referencing a file
+sheet.replace('@import url("./src/style.css")')
+  .then(sheet => {
+    console.log('Styles loaded successfully');
+  })
+  .catch(err => {
+    console.error('Failed to load:', err);
+  });
+
+
+
+
 
 export class planetClockElement extends LitElement {
   /**
@@ -41,7 +58,7 @@ export class planetClockElement extends LitElement {
     // Initialize properties
     this.loaded = false;
 
-
+    this.shadowRoot.adoptedStyleSheets = [sheet];
 
     // this.date = new Date();
     this.date = new Date('Thu Aug 22 2019 20:36:10 GMT-0800 (Pacific Standard Time)');
@@ -56,13 +73,17 @@ export class planetClockElement extends LitElement {
   }
 
   static get styles() {
-    var request = new XMLHttpRequest();
-    request.open('GET', './src/style.css', false);
-    request.send();
+    // var request = new XMLHttpRequest();
+    // request.open('GET', './src/style.css', false);
+    // request.send();
 
-    return [
-      css `${unsafeCSS(request.responseText)}`
-    ];
+    // return [
+    //   css `${unsafeCSS(request.responseText)}`
+    // ];
+
+    // return [
+    //   styles
+    // ];
   }
 
   togglePlanetAnimation(event) {
